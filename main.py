@@ -122,7 +122,7 @@ class Comment(db.Model):
 
 
 # Create the above tables to blog.db database
-db.create_all()
+#db.create_all()
 
 
 # Everytime you call render_template(), you pass the current_user over to the template.
