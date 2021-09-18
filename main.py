@@ -121,8 +121,8 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 
-# Create the above tables in the existing blog.db database
-#db.create_all()
+# Create the above tables to blog.db database
+db.create_all()
 
 
 # Everytime you call render_template(), you pass the current_user over to the template.
