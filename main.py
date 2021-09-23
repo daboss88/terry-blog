@@ -243,8 +243,14 @@ def about():
     return render_template("about.html", current_user=current_user)
 
 
-@app.route("/contact")
+@app.route("/contact", methods=['GET', 'POST'])
 def contact():
+    contact_message = False
+    if request.method == 'POST':
+        contact_message = True
+
+        return render_template('contact.html', contact_message=contact_message)
+
     return render_template("contact.html", current_user=current_user)
 
 
